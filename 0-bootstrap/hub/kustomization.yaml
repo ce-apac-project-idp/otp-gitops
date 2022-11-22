@@ -1,0 +1,89 @@
+resources:
+ - 1-infra/1-infra.yaml
+ - 2-services/2-services.yaml
+ - 3-policies/3-policies.yaml
+ ## Uncomment once the above layers have completed.
+ # - 4-clusters/4-clusters.yaml
+ # - 5-apps/5-apps.yaml
+
+patches:
+- target:
+    group: argoproj.io
+    kind: Application
+    labelSelector: "gitops.tier.layer=gitops"
+  patch: |-
+    - op: add
+      path: /spec/source/repoURL
+      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS}
+    - op: add
+      path: /spec/source/targetRevision
+      value: ${GIT_GITOPS_BRANCH}
+- target:
+    group: argoproj.io
+    kind: AppProject
+  patch: |-
+    - op: add
+      path: /spec/sourceRepos/-
+      value: ${HELM_REPOURL}
+- target:
+    group: argoproj.io
+    kind: AppProject
+    labelSelector: "gitops.tier.layer=infra"
+  patch: |-
+    - op: add
+      path: /spec/sourceRepos/-
+      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS}
+    - op: add
+      path: /spec/sourceRepos/-
+      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS_INFRA}
+- target:
+    group: argoproj.io
+    kind: AppProject
+    labelSelector: "gitops.tier.layer=services"
+  patch: |-
+    - op: add
+      path: /spec/sourceRepos/-
+      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS}
+    - op: add
+      path: /spec/sourceRepos/-
+      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS_SERVICES}
+- target:
+    group: argoproj.io
+    kind: AppProject
+    labelSelector: "gitops.tier.layer=applications"
+  patch: |-
+    - op: add
+      path: /spec/sourceRepos/-
+      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS}
+    - op: add
+      path: /spec/sourceRepos/-
+      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS_APPLICATIONS}
+- target:
+    group: argoproj.io
+    kind: AppProject
+    labelSelector: "gitops.tier.layer=clusters"
+  patch: |-
+    - op: add
+      path: /spec/sourceRepos/-
+      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS}
+    - op: add
+      path: /spec/sourceRepos/-
+      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS_CLUSTERS}
+- target:
+    group: argoproj.io
+    kind: AppProject
+    labelSelector: "gitops.tier.layer=policies"
+  patch: |-
+    - op: add
+      path: /spec/sourceRepos/-
+      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS}
+    - op: add
+      path: /spec/sourceRepos/-
+      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS_POLICIES}
+- target:
+    group: argoproj.io
+    kind: Application
+  patch: |-
+    - op: replace
+      path: /spec/destination/namespace
+      value: openshift-gitops
