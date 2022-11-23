@@ -15,23 +15,23 @@ resources:
  #- argocd/operators/ironic.yaml
  
   # Red Hat Quay Registry
- - argocd/operators/quay-registry.yaml
- - argocd/instances/quay-registry-instance.yaml
- - argocd/operators/quay-container-security.yaml
- - argocd/operators/quay-bridge-operator.yaml
+#  - argocd/operators/quay-registry.yaml
+#  - argocd/instances/quay-registry-instance.yaml
+#  - argocd/operators/quay-container-security.yaml
+#  - argocd/operators/quay-bridge-operator.yaml
 
  # Secrets Managment
- - argocd/operators/external-secrets.yaml
- - argocd/instances/external-secrets.yaml
+#  - argocd/operators/external-secrets.yaml
+#  - argocd/instances/external-secrets.yaml
 
  # Ansible Automation Platform
- - argocd/operators/ansible-automation-platform-operator.yaml
- - argocd/instances/ansible-automation-platform-controller-instance.yaml
- - argocd/instances/ansible-automation-platform-hub-instance.yaml
+#  - argocd/operators/ansible-automation-platform-operator.yaml
+#  - argocd/instances/ansible-automation-platform-controller-instance.yaml
+#  - argocd/instances/ansible-automation-platform-hub-instance.yaml
 
  # OpenShift Advanced Cluster Security (aka Stackrox)
- - argocd/operators/openshift-acs-operator.yaml
- - argocd/instances/openshift-acs-instance.yaml
+#  - argocd/operators/openshift-acs-operator.yaml
+#  - argocd/instances/openshift-acs-instance.yaml
 
  ## Optional Components. These are NOT required for OTP, but can be enabled.
 
