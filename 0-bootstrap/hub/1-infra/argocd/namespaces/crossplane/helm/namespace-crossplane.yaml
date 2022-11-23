@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: crossplane-helm-rbac
-  annotations:
-    argocd.argoproj.io/sync-wave: "200"
+  name: namespace-crossplane
+  namespace: openshift-gitops
   labels:
-    gitops.tier.group: crossplane
-    gitops.tier.layer: services
+    gitops.tier.layer: infra
+  annotations:
+    argocd.argoproj.io/sync-wave: "100"
 spec:
   destination:
     namespace: crossplane-system
     server: https://kubernetes.default.svc
-  project: services
+  project: infra
   source:
-    path: instances/crossplane/helm/rbac
+    path: namespaces/crossplane/helm
   syncPolicy:
     automated:
       prune: true

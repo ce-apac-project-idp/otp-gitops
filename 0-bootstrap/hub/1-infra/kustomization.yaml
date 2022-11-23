@@ -8,7 +8,12 @@ resources:
  - argocd/consolelink.yaml
 
  # Crossplane
- - argocd/namespaces/crossplane/namespace-crossplane.yaml
+
+ ## Namespace Crossplane - Helm
+ - argocd/namespaces/crossplane/helm/namespace-crossplane.yaml
+
+ ## Namespace Upbound - Operator
+ - argocd/namespaces/crossplane/operator/namespace-upbound.yaml
 
  # External Secrets
  - argocd/rbac/rbac-external-secrets.yaml

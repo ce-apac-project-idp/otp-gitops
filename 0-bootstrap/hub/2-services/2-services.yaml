@@ -8,6 +8,8 @@ metadata:
 spec:
   sourceRepos: [] # Populated by kustomize patches in 2-services/kustomization.yaml
   destinations:
+  - namespace: upbound-system
+    server: https://kubernetes.default.svc
   - namespace: crossplane-system
     server: https://kubernetes.default.svc
   - namespace: kube-system
