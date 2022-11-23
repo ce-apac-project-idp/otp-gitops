@@ -10,8 +10,8 @@ spec:
   project: default
   source:
     path: 0-bootstrap/hub
-    repoURL: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS}
-    targetRevision: ${GIT_GITOPS_BRANCH}
+    repoURL: https://github.com/ce-apac-project-idp/otp-gitops.git
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true
