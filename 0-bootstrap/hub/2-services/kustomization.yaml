@@ -2,7 +2,8 @@ resources:
  ## Base Components required for One Touch Provisioning
 
  # Crossplane
- - argocd/operators/crossplane/crossplane.yaml
+ - argocd/operators/crossplane/helm/crossplane.yaml
+ - argocd/operators/crossplane/rbac/rbac.yaml
 
  # Red Hat Advanced Cluster Management
  - argocd/operators/openshift-acm.yaml
