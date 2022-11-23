@@ -7,6 +7,9 @@ resources:
  # Console link
  - argocd/consolelink.yaml
 
+ # Crossplane
+ - argocd/namespaces/crossplane/namespace-crossplane.yaml
+
  # External Secrets
  - argocd/rbac/rbac-external-secrets.yaml
  - argocd/namespaces/namespace-external-secrets.yaml
