@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: crossplane-operator
+  annotations:
+    argocd.argoproj.io/sync-wave: "200"
+  labels:
+    gitops.tier.group: crossplane
+    gitops.tier.layer: services
+spec:
+  destination:
+    namespace: crossplane-system
+    server: https://kubernetes.default.svc
+  project: services
+  source:
+    path: operators/crossplane
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
