@@ -19,6 +19,7 @@ resources:
 
  ### AWS
  - argocd/rbac/crossplane/providers/aws/rbac-aws-provider.yaml
+ - argocd/rbac/crossplane/providers/aws/job/configure-job.yaml
 
  # External Secrets
  - argocd/rbac/rbac-external-secrets.yaml

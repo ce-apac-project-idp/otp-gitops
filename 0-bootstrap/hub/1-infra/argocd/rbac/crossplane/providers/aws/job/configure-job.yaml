@@ -6,14 +6,14 @@ metadata:
     gitops.tier.layer: infra
     gitops.tier.group: crossplane
   annotations:
-    argocd.argoproj.io/sync-wave: "110"
+    argocd.argoproj.io/sync-wave: "120"
 spec:
   destination:
     namespace: openshift-gitops
     server: https://kubernetes.default.svc
   project: infra
   source:
-    path: rbac/crossplane/providers/aws
+    path: rbac/crossplane/providers/aws/job
   syncPolicy:
     automated:
       prune: true
