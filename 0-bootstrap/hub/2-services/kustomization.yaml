@@ -12,6 +12,10 @@ resources:
  ### PostDeploy
 #  - argocd/instances/crossplane/helm/postdeploy/provider-configuraton.yaml
 
+ ### Runtime
+ - argocd/instances/crossplane/helm/runtime/aws/provider.yaml
+ - argocd/instances/crossplane/helm/runtime/aws/providerconfig.yaml
+
  ## OperatorHub
 #  - argocd/operators/crossplane/crossplane.yaml
 

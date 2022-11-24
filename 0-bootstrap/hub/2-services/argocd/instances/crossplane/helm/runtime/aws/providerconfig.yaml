@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: crossplane-aws-providerconfig
+  annotations:
+    argocd.argoproj.io/sync-wave: "230"
+  labels:
+    gitops.tier.group: crossplane
+    gitops.tier.layer: services
+spec:
+  destination:
+    namespace: crossplane-system
+    server: https://kubernetes.default.svc
+  project: services
+  source:
+    path: instances/crossplane/helm/runtime/aws/providerconfig
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
