@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: crossplane-aws-provider
+  name: crossplane-aws-providerconfig
   annotations:
     argocd.argoproj.io/sync-wave: "230"
   labels:
