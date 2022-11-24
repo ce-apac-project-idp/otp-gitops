@@ -4,8 +4,13 @@ resources:
  # Crossplane
 
  ## Helm
+
+ ### Deploy
  - argocd/instances/crossplane/helm/deploy/crossplane.yaml
  - argocd/instances/crossplane/helm/rbac/rbac.yaml
+
+ ### PostDeploy
+#  - argocd/instances/crossplane/helm/postdeploy/provider-configuraton.yaml
 
  ## OperatorHub
 #  - argocd/operators/crossplane/crossplane.yaml
