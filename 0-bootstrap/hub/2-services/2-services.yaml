@@ -80,7 +80,7 @@ spec:
   # TODO: SCC needs to be moved to 1-infra, here for now for artifactory
   - group: "pkg.crossplane.io"
     kind: Provider
-  - group: "aws.crossplane.io/v1beta1"
+  - group: "aws.crossplane.io/"
     kind: ProviderConfig
   - group: "security.openshift.io"
     kind: SecurityContextConstraints
