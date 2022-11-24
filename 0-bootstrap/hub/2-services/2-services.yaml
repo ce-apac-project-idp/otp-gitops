@@ -8,6 +8,8 @@ metadata:
 spec:
   sourceRepos: [] # Populated by kustomize patches in 2-services/kustomization.yaml
   destinations:
+  - namespace: external-secrets
+    server: https://kubernetes.default.svc
   - namespace: upbound-system
     server: https://kubernetes.default.svc
   - namespace: crossplane-system
@@ -69,8 +71,6 @@ spec:
   - namespace: istio-system
     server: https://kubernetes.default.svc
   - namespace: cert-manager 
-    server: https://kubernetes.default.svc
-  - namespace: external-secrets
     server: https://kubernetes.default.svc
   - namespace: quay-registry
     server: https://kubernetes.default.svc
