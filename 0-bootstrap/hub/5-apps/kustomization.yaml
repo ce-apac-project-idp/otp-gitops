@@ -1,6 +1,9 @@
 resources:
  ## Optional Components. These are NOT required for OTP, but can be enabled.
 
+ # User Service 
+ # - argocd/authentication/user-service.yaml
+
  ## WAIOps Infrastructure Automation Pipelines
  #- argocd/pipelines/tekton-mcm-gitops.yaml
  #- argocd/pipelines/tekton-mcm-providers.yaml
@@ -22,6 +25,7 @@ resources:
  ## Include the Applications you wish to deploy below
  ## An example has been provided
  #- argocd/cloudpaks/cp4i/cp4i.yaml
+ 
 
 patches:
 - target:
