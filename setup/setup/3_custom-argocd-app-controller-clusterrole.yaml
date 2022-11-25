@@ -6,6 +6,12 @@ rules:
   - verbs:
       - '*'
     apiGroups:
+      - s3.aws.crossplane.io
+    resources:
+      - '*'
+  - verbs:
+      - '*'
+    apiGroups:
       - aws.crossplane.io
     resources:
       - '*'
