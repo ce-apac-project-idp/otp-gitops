@@ -82,6 +82,8 @@ spec:
     kind: Provider
   - group: "aws.crossplane.io"
     kind: ProviderConfig
+  - group: "s3.aws.crossplane.io"
+    kind: Bucket
   - group: "security.openshift.io"
     kind: SecurityContextConstraints
   - group: "console.openshift.io"
