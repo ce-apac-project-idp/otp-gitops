@@ -6,6 +6,24 @@ rules:
   - verbs:
       - '*'
     apiGroups:
+      - s3.aws.crossplane.io
+    resources:
+      - '*'
+  - verbs:
+      - '*'
+    apiGroups:
+      - aws.crossplane.io
+    resources:
+      - '*'
+  - verbs:
+      - '*'
+    apiGroups:
+      - pkg.crossplane.io
+    resources:
+      - '*'
+  - verbs:
+      - '*'
+    apiGroups:
       - ''
     resources:
       - pods
