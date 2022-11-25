@@ -15,7 +15,7 @@ resources:
  ### Runtime
  - argocd/instances/crossplane/helm/runtime/aws/provider.yaml
  - argocd/instances/crossplane/helm/runtime/aws/providerconfig.yaml
- - argocd/instances/crossplane/helm/runtime/aws/resources/bucket.yaml
+#  - argocd/instances/crossplane/helm/runtime/aws/resources/bucket.yaml
 
  ## OperatorHub
 #  - argocd/operators/crossplane/crossplane.yaml
