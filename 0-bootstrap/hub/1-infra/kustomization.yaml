@@ -25,6 +25,7 @@ resources:
  - argocd/namespaces/backstage/namespace-backstage.yaml
 
  # Sealed Secrets
+ - argocd/namespaces/namespace-sealed-secrets.yaml
  - argocd/secrets/sealed-secrets.yaml
 
  # External Secrets
