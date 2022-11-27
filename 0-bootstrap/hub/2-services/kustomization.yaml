@@ -20,6 +20,12 @@ resources:
  ## OperatorHub
 #  - argocd/operators/crossplane/crossplane.yaml
 
+ # Backstage
+ ## Postgresql
+ - argocd/instances/backstage/postgresql/postgresql.yaml
+ - argocd/instances/backstage/postgresql/postgresql-sealed-secrets.yaml
+ ## Backstage instance
+
 
  # Red Hat Advanced Cluster Management
  - argocd/operators/openshift-acm.yaml
