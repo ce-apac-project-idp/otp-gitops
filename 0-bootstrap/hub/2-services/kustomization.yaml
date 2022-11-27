@@ -25,6 +25,7 @@ resources:
  - argocd/instances/backstage/postgresql/postgresql.yaml
  - argocd/instances/backstage/postgresql/postgresql-sealed-secrets.yaml
  ## Backstage instance
+ - argocd/instances/backstage/backstage/backstage.yaml
 
 
  # Red Hat Advanced Cluster Management

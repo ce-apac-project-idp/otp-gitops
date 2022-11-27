@@ -1,9 +1,9 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: backstage-postgresql-sealed-secrets
+  name: backstage-postgresql
   annotations:
-    argocd.argoproj.io/sync-wave: "230"
+    argocd.argoproj.io/sync-wave: "250"
   labels:
     gitops.tier.layer: services
   finalizers:
@@ -14,7 +14,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: services
   source:
-    path: instances/backstage/postgresql/predeploy
+    path: instances/backstage/backstage/deploy
   syncPolicy:
     automated:
       prune: true
