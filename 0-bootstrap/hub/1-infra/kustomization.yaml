@@ -21,6 +21,13 @@ resources:
  - argocd/rbac/crossplane/providers/aws/rbac-aws-provider.yaml
  - argocd/rbac/crossplane/providers/aws/job/configure-job.yaml
 
+ # Backstage
+ - argocd/namespaces/backstage/namespace-backstage.yaml
+
+ # Sealed Secrets
+ - argocd/namespaces/namespace-sealed-secrets.yaml
+ - argocd/secrets/sealed-secrets.yaml
+
  # External Secrets
  - argocd/rbac/rbac-external-secrets.yaml
  - argocd/namespaces/namespace-external-secrets.yaml
