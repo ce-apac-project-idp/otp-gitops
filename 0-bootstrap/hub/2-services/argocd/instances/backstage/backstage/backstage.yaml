@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: backstage
   annotations:
-    argocd.argoproj.io/sync-wave: "250"
+    argocd.argoproj.io/sync-wave: "320"
   labels:
     gitops.tier.layer: services
   finalizers:
@@ -14,7 +14,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: services
   source:
-    path: instances/backstage/backstage/deploy
+    path: instances/backstage/backstage
   syncPolicy:
     automated:
       prune: true

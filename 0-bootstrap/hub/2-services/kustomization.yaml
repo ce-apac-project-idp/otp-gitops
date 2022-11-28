@@ -21,9 +21,10 @@ resources:
 #  - argocd/operators/crossplane/crossplane.yaml
 
  # Backstage
+ ## Secrets
+ - argocd/instances/backstage/backstage-sealed-secrets.yaml
  ## Postgresql
  - argocd/instances/backstage/postgresql/postgresql.yaml
- - argocd/instances/backstage/postgresql/postgresql-sealed-secrets.yaml
  ## Backstage instance
  - argocd/instances/backstage/backstage/backstage.yaml
 
