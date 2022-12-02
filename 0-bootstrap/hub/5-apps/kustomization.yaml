@@ -26,6 +26,10 @@ resources:
  ## An example has been provided
  #- argocd/cloudpaks/cp4i/cp4i.yaml
  
+ ## Backstage
+
+ ### Backstage - Demo
+ - argocd/backstage-apps/demo/backstage-app.yaml
 
 patches:
 - target:
