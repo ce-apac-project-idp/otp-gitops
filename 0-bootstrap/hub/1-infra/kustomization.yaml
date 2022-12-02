@@ -32,6 +32,9 @@ resources:
  - argocd/rbac/rbac-external-secrets.yaml
  - argocd/namespaces/namespace-external-secrets.yaml
 
+ # Tekton
+ - argocd/namespaces/tekton/namespace-tekton.yaml
+
  # Red Hat Advanced Cluster Management
  - argocd/rbac/rbac-rhacm.yaml
  - argocd/namespaces/namespace-openshift-acm.yaml

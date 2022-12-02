@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: namespace-tekton
+  namespace: openshift-gitops
+  labels:
+    gitops.tier.layer: infra
+  annotations:
+    argocd.argoproj.io/sync-wave: "150"
+spec:
+  destination:
+    namespace: backstage
+    server: https://kubernetes.default.svc
+  project: infra
+  source:
+    path: namespaces/tekton
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
