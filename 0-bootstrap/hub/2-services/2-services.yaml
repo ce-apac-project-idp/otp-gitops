@@ -8,6 +8,8 @@ metadata:
 spec:
   sourceRepos: [] # Populated by kustomize patches in 2-services/kustomization.yaml
   destinations:
+  - namespace: tekton
+    server: https://kubernetes.default.svc
   - namespace: external-secrets
     server: https://kubernetes.default.svc
   - namespace: upbound-system
