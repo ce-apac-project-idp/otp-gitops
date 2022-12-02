@@ -55,7 +55,7 @@ resources:
  # Tekton
 
  ## Tekton tasks
- - argocd/instances/tekton/task/backstage-pipeline/tekton-tasks.yaml
+ - argocd/instances/tekton/backstage/task/tekton-tasks.yaml
 
  # Ansible Automation Platform
 #  - argocd/operators/ansible-automation-platform-operator.yaml
