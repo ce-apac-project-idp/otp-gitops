@@ -52,6 +52,11 @@ resources:
  - argocd/operators/external-secrets.yaml
  - argocd/instances/external-secrets.yaml
 
+ # Tekton
+
+ ## Tekton tasks
+ - argocd/instances/tekton/task/backstage-pipeline/tekton-tasks.yaml
+
  # Ansible Automation Platform
 #  - argocd/operators/ansible-automation-platform-operator.yaml
 #  - argocd/instances/ansible-automation-platform-controller-instance.yaml
