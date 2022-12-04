@@ -4,6 +4,7 @@ metadata:
   name: apps-backstage-demo
   annotations:
     argocd.argoproj.io/sync-wave: "500"
+    argocd.argoproj.io/sync-options: Prune=false
   labels:
     gitops.tier.layer: applications
   finalizers:
