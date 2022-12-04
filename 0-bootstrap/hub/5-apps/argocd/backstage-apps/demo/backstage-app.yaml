@@ -14,7 +14,7 @@ spec:
     server: https://kubernetes.default.svc
   project: applications
   source:
-    path: idp/developers/end-user/end-user-app
+    path: idp/developers/DeveloperDave/dice-roller-application
   syncPolicy:
     automated:
       prune: true
