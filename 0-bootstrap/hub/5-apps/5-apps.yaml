@@ -14,8 +14,8 @@ spec:
   - group: '*'
     kind: '*'
   clusterResourceBlacklist:
-  - group: '*'
-    kind: 'Composite*'
+  - group: 'apac.catalyst.project.idp'
+    kind: '*'
   roles:
   # A role which provides read-only access to all applications in the project
   - name: read-only
