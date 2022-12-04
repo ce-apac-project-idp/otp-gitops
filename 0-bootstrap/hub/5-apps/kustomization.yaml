@@ -29,7 +29,7 @@ resources:
  ## Backstage
 
  ### Backstage - Demo
-#  - argocd/backstage-apps/demo/backstage-app.yaml
+ - argocd/backstage-apps/demo/backstage-app.yaml
 
 patches:
 - target:
