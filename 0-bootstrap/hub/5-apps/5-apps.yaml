@@ -13,6 +13,9 @@ spec:
   clusterResourceWhitelist:
   - group: '*'
     kind: '*'
+  clusterResourceBlacklist:
+  - group: '*'
+    kind: 'Composite*'
   roles:
   # A role which provides read-only access to all applications in the project
   - name: read-only
