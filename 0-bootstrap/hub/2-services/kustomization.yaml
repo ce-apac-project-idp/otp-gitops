@@ -54,7 +54,7 @@ resources:
 
  # Tekton
  ## Tekton - RBAC
- argocd/instances/tekton/rbac/rbac.yaml
+ - argocd/instances/tekton/rbac/rbac.yaml
  ## Tekton - Backstage tasks
  - argocd/instances/tekton/backstage/task/tekton-tasks.yaml
  ## Tekton - Backstage pipeline
