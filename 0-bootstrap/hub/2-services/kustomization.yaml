@@ -53,7 +53,8 @@ resources:
  - argocd/instances/external-secrets.yaml
 
  # Tekton
-
+ ## Tekton - RBAC
+ argocd/instances/tekton/rbac/rbac.yaml
  ## Tekton - Backstage tasks
  - argocd/instances/tekton/backstage/task/tekton-tasks.yaml
  ## Tekton - Backstage pipeline
@@ -61,6 +62,7 @@ resources:
  - argocd/instances/tekton/backstage/trigger/trigger.yaml
  - argocd/instances/tekton/backstage/eventlistener/event-listener.yaml
  - argocd/instances/tekton/backstage/route/route.yaml
+
 
  # Ansible Automation Platform
 #  - argocd/operators/ansible-automation-platform-operator.yaml
