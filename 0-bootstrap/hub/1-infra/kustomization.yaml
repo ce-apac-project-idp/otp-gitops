@@ -23,6 +23,7 @@ resources:
 
  # Backstage
  - argocd/namespaces/backstage/namespace-backstage.yaml
+ - argocd/namespaces/backstage/namespace-backstage-dev.yaml
 
  # Sealed Secrets
  - argocd/namespaces/namespace-sealed-secrets.yaml
