@@ -27,7 +27,7 @@ resources:
  - argocd/instances/backstage/postgresql/postgresql.yaml
  ## Backstage instance
  - argocd/instances/backstage/backstage/backstage.yaml
- - argocd/instances/backstage/backstage/backstage-dev.yaml
+# - argocd/instances/backstage/backstage/backstage-dev.yaml
 
 
  # Red Hat Advanced Cluster Management
