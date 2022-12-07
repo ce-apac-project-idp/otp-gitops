@@ -18,8 +18,6 @@ spec:
     server: https://kubernetes.default.svc
   - namespace: backstage
     server: https://kubernetes.default.svc
-  - namespace: backstage-dev
-    server: https://kubernetes.default.svc
   - namespace: kube-system
     server: https://kubernetes.default.svc 
   - namespace: tools
