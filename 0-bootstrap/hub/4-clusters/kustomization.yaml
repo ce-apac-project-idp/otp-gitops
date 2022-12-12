@@ -3,7 +3,7 @@ resources:
  ## Include any Private or Public Cloud Providers you may have
  ## Examples have been provided for both SealedSecrets and leveraging an external Key Store via ExternalSecrets Operator
  #- argocd/infra/providers/rhacm/aws/sealed-secrets/aws.yaml
- #- argocd/infra/providers/rhacm/aws/external-secrets/aws.yaml 
+ - argocd/infra/providers/rhacm/aws/external-secrets/aws.yaml 
  #- argocd/infra/providers/rhacm/azure/sealed-secrets/azure.yaml
  #- argocd/infra/providers/rhacm/azure/external-secrets/azure.yaml
  #- argocd/infra/providers/rhacm/vsphere/sealed-secrets/vsphere.yaml

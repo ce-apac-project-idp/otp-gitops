@@ -30,10 +30,10 @@ spec:
 
         # Required Values
         awsSecrets:
-          awsAccessKeyRef: 88671bfc-14d4-29ad-ab9b-950eaac3808f
-          awsSecretKeyRef: ac307a9e-41fc-23df-2f28-3ce521b971ea
-          awsBaseDomainRef: 3ab49d22-2408-3dd0-3891-7d613f74c293
-          openshiftPullSecretRef: 115f3c37-cd7c-5704-173f-a8a3e1234b2d
-          openshiftSSHPrivateKeyRef: 9f9063e0-1525-2534-cf8e-9c85096c7b3d
-          openshiftSSHPublicKeyRef: 90a961eb-dfd6-dbbc-049f-a532560614f6
+          awsAccessKeyRef: e7e8a6c4-7e13-d961-3e2c-b73a1bb73658
+          awsSecretKeyRef: f0fb2319-46f4-9c71-577a-883d574e8c69
+          awsBaseDomainRef: 3e0232f9-88eb-96ae-ff3b-41ec982979a6
+          openshiftPullSecretRef: f9fcbfc5-6c62-e001-5a90-55401d1608d6
+          openshiftSSHPrivateKeyRef: 16d3cb8f-1514-b7b8-c9c3-8c085294c6ff
+          openshiftSSHPublicKeyRef: 7200ab03-1974-99f6-952b-ec1a2beeba50
   
