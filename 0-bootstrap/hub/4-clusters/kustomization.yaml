@@ -11,7 +11,7 @@ resources:
 
  ## ClusterPools
  ## Example: - argocd/clusterpools/<env>/<cloud>/<clusterpoolname>/<clusterpoolname.yaml>
- #- argocd/clusterpools/cicd/aws/aws-cicd-pool/aws-cicd-pool.yaml
+ - argocd/clusterpools/cicd/aws/aws-cicd-pool/aws-cicd-pool.yaml
  #- argocd/clusterpools/cicd/azure/azure-cicd-pool/azure-cicd-pool.yaml
  #- argocd/clusterpools/dev/aws/aws-dev-pool/aws-dev-pool.yaml
  #- argocd/clusterpools/test/aws/aws-test-pool/aws-test-pool.yaml

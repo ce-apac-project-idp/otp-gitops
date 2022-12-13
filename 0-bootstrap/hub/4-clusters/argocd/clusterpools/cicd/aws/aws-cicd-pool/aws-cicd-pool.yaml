@@ -22,7 +22,7 @@ spec:
     helm:
       values: |
         clusterpoolName: aws-cicd-pool
-        imageName: 4.10.18
+        imageName: 4.10.43
 
         provider:
           region: ap-southeast-2
