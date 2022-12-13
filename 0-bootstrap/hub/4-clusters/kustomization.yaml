@@ -28,7 +28,7 @@ resources:
  ## Example : - argocd/<env>/<cloud>/<clustername>/<clustername.yaml>
 
  ### AWS
- #- argocd/clusters/cicd/aws/aws-cicd/aws-cicd.yaml
+ - argocd/clusters/cicd/aws/aws-cicd/aws-cicd.yaml
  #- argocd/clusters/dev/aws/aws-dev/aws-dev.yaml
  #- argocd/clusters/prod/aws/aws-prod/aws-prod.yaml
  
