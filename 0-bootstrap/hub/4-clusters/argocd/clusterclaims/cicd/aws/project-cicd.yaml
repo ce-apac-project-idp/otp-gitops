@@ -28,5 +28,6 @@ spec:
         managedCluster: 
           status: "enabled"
           managedRepo: https://github.com/testing-gitops/otp-gitops.git
+          managedRepoBranch: main
           environment: cicd
           projectName: project-cicd
