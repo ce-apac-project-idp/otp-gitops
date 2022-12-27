@@ -50,7 +50,7 @@ resources:
 #  - argocd/namespaces/namespace-ansible-automation-platform.yaml
  
  # Openshift Advanced Cluster Security
- - argocd/namespaces/namespace-openshift-acs.yaml
+# - argocd/namespaces/namespace-openshift-acs.yaml
 
   # Quay Registry
 #  - argocd/namespaces/namespace-quay-registry.yaml
