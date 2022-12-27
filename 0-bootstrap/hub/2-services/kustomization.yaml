@@ -71,7 +71,7 @@ resources:
 
  # OpenShift Advanced Cluster Security (aka Stackrox)
  - argocd/operators/openshift-acs-operator.yaml
- - argocd/instances/openshift-acs-instance.yaml
+# - argocd/instances/openshift-acs-instance.yaml
 
  ## Optional Components. These are NOT required for OTP, but can be enabled.
 
