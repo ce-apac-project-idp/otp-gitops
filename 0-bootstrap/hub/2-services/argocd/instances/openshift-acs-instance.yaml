@@ -9,7 +9,7 @@ metadata:
     gitops.tier.layer: services
 spec:
   destination:
-    namespace: stackrox 
+    namespace: rhacs-operator
     server: https://kubernetes.default.svc
   project: services
   source:
