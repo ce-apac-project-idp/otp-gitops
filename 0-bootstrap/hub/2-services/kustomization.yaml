@@ -22,7 +22,7 @@ resources:
 
  # Backstage
  ## Secrets
- - argocd/instances/backstage/backstage-sealed-secrets.yaml
+ - argocd/instances/backstage/backstage-external-secrets.yaml
  ## Postgresql
  - argocd/instances/backstage/postgresql/postgresql.yaml
  ## Backstage instance
