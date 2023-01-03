@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: otp-gitops-repo-secret
+  namespace: openshift-gitops
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  url: https://github.com/ce-apac-project-idp/otp-gitops-services
+  password: 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
+  username: not-used
