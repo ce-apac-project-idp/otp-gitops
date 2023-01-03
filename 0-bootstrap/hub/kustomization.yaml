@@ -1,6 +1,6 @@
 resources:
  - 1-infra/1-infra.yaml
- - 2-services/2-services.yaml
+# - 2-services/2-services.yaml
 #  - 3-policies/3-policies.yaml
  ## Uncomment once the above layers have completed.
 # - 4-clusters/4-clusters.yaml
