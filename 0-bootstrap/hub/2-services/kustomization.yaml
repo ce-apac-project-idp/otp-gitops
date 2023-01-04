@@ -122,7 +122,7 @@ resources:
 
  # Observability
  #- argocd/operators/turbonomic.yaml
- #- argocd/instances/instana-agent.yaml
+ - argocd/instances/instana-agent.yaml
 
  # RHSSO
  #- argocd/operators/rhsso-operator.yaml
