@@ -30,12 +30,12 @@ resources:
 
 
  # Red Hat Advanced Cluster Management
- - argocd/operators/openshift-acm.yaml
- - argocd/instances/openshift-acm-instance.yaml
+ #- argocd/operators/openshift-acm.yaml
+ #- argocd/instances/openshift-acm-instance.yaml
  #- argocd/instances/openshift-acm-observability-instance.yaml
- - argocd/instances/openshift-gitopscluster-instance.yaml
+ #- argocd/instances/openshift-gitopscluster-instance.yaml
  # Red Hat Advanced Cluster Management - Central Infrastructure Management
- - argocd/instances/openshift-acm-cim.yaml
+ #- argocd/instances/openshift-acm-cim.yaml
  # Red Hat Advanced Cluster Management - Discovery Service
  #- argocd/instances/openshift-acm-discovery-service.yaml
  # Red Hat Advanced Cluster Management - Bare Metal Operator and Ironic
