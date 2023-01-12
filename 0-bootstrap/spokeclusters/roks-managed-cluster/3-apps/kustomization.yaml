@@ -1,0 +1,15 @@
+resources:
+ ## Deploy Applications to Managed Clusters
+
+patches:
+- target:
+    group: argoproj.io
+    kind: Application
+    labelSelector: "gitops.tier.layer=applications"
+  patch: |-
+    - op: add
+      path: /spec/source/repoURL
+      value: https://github.com/ce-apac-project-idp/otp-gitops-apps.git
+    - op: add
+      path: /spec/source/targetRevision
+      value: master

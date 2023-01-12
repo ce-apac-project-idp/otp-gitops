@@ -1,0 +1,15 @@
+resources:
+ - argocd/namespaces/namespace-sealed-secrets.yaml
+
+patches:
+- target:
+    group: argoproj.io
+    kind: Application
+    labelSelector: "gitops.tier.layer=infra"
+  patch: |-
+    - op: add
+      path: /spec/source/repoURL
+      value: https://github.com/ce-apac-project-idp/otp-gitops-infra.git
+    - op: add
+      path: /spec/source/targetRevision
+      value: master
