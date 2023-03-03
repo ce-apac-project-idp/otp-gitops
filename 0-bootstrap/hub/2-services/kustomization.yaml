@@ -6,7 +6,7 @@ resources:
  ## Helm
 
  ### Deploy
-#  - argocd/instances/crossplane/helm/deploy/crossplane.yaml
+ - argocd/instances/crossplane/helm/deploy/crossplane.yaml
 #  - argocd/instances/crossplane/helm/rbac/rbac.yaml
 
  ### PostDeploy
