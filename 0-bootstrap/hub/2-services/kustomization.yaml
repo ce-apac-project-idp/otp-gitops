@@ -7,14 +7,14 @@ resources:
 
  ### Deploy
  - argocd/instances/crossplane/helm/deploy/crossplane.yaml
- - argocd/instances/crossplane/helm/rbac/rbac.yaml
+#  - argocd/instances/crossplane/helm/rbac/rbac.yaml
 
  ### PostDeploy
-#  - argocd/instances/crossplane/helm/postdeploy/provider-configuraton.yaml
+ - argocd/instances/crossplane/helm/postdeploy/provider-configuraton.yaml
 
  ### Runtime
- - argocd/instances/crossplane/helm/runtime/aws/provider.yaml
- - argocd/instances/crossplane/helm/runtime/aws/providerconfig.yaml
+#  - argocd/instances/crossplane/helm/runtime/aws/provider.yaml
+#  - argocd/instances/crossplane/helm/runtime/aws/providerconfig.yaml
 #  - argocd/instances/crossplane/helm/runtime/aws/resources/bucket.yaml
 
  ## OperatorHub
@@ -22,11 +22,11 @@ resources:
 
  # Backstage
  ## Secrets
- - argocd/instances/backstage/backstage-external-secrets.yaml
+#  - argocd/instances/backstage/backstage-external-secrets.yaml
  ## Postgresql
- - argocd/instances/backstage/postgresql/postgresql.yaml
+#  - argocd/instances/backstage/postgresql/postgresql.yaml
  ## Backstage instance
- - argocd/instances/backstage/backstage/backstage.yaml
+#  - argocd/instances/backstage/backstage/backstage.yaml
 
 
  # Red Hat Advanced Cluster Management
@@ -49,19 +49,19 @@ resources:
 #  - argocd/operators/quay-bridge-operator.yaml
 
  # Secrets Managment
- - argocd/operators/external-secrets.yaml
- - argocd/instances/external-secrets.yaml
+#  - argocd/operators/external-secrets.yaml
+#  - argocd/instances/external-secrets.yaml
 
  # Tekton
  ## Tekton - RBAC
- - argocd/instances/tekton/rbac/rbac.yaml
+#  - argocd/instances/tekton/rbac/rbac.yaml
  ## Tekton - Backstage tasks
- - argocd/instances/tekton/backstage/task/tekton-tasks.yaml
+#  - argocd/instances/tekton/backstage/task/tekton-tasks.yaml
  ## Tekton - Backstage pipeline
- - argocd/instances/tekton/backstage/pipeline/pipeline.yaml
- - argocd/instances/tekton/backstage/trigger/trigger.yaml
- - argocd/instances/tekton/backstage/eventlistener/event-listener.yaml
- - argocd/instances/tekton/backstage/route/route.yaml
+#  - argocd/instances/tekton/backstage/pipeline/pipeline.yaml
+#  - argocd/instances/tekton/backstage/trigger/trigger.yaml
+#  - argocd/instances/tekton/backstage/eventlistener/event-listener.yaml
+#  - argocd/instances/tekton/backstage/route/route.yaml
 
 
  # Ansible Automation Platform
@@ -70,8 +70,8 @@ resources:
 #  - argocd/instances/ansible-automation-platform-hub-instance.yaml
 
  # OpenShift Advanced Cluster Security (aka Stackrox)
- - argocd/operators/openshift-acs-operator.yaml
- - argocd/instances/openshift-acs-instance.yaml
+#  - argocd/operators/openshift-acs-operator.yaml
+#  - argocd/instances/openshift-acs-instance.yaml
 
  ## Optional Components. These are NOT required for OTP, but can be enabled.
 
@@ -122,7 +122,7 @@ resources:
 
  # Observability
  #- argocd/operators/turbonomic.yaml
- - argocd/instances/instana-agent.yaml
+#  - argocd/instances/instana-agent.yaml
 
  # RHSSO
  #- argocd/operators/rhsso-operator.yaml
