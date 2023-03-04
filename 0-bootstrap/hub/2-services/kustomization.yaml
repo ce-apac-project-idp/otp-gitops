@@ -11,10 +11,11 @@ resources:
 
  ### Runtime
  - argocd/instances/crossplane/helm/runtime/aws/provider.yaml
+
+ ### Runtime - Interim fix
+ - argocd/instances/crossplane/helm/postdeploy/provider-configuration.yaml
 #  - argocd/instances/crossplane/helm/runtime/aws/providerconfig.yaml
 
- ### PostDeploy
-#  - argocd/instances/crossplane/helm/postdeploy/provider-configuration.yaml
 
  ### Objects
 #  - argocd/instances/crossplane/helm/runtime/aws/resources/bucket.yaml
