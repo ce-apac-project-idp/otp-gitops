@@ -2,10 +2,9 @@ resources:
  ## Base Components required for One Touch Provisioning
 
  # Secrets Managment
- - argocd/operators/external-secrets.yaml # (200 - Operator based install)
-#  - argocd/instances/sealed-secrets.yaml   # (200 - This is a helm based install of SealedSecrets)
+ - argocd/operators/external-secrets.yaml # (200 - Operator based install - The SS Controller is deployed within Infra)
 
- #  - argocd/instances/external-secrets.yaml  # (203 - Create the SS instance and configure accordingly FIRST)
+ - argocd/instances/external-secrets.yaml  # (203 - Create the SS instance and configure according to README in the corresponding directory in the services repo)
 
  # Crossplane
 
