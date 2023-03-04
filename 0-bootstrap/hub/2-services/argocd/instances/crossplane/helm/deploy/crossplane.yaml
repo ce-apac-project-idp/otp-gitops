@@ -14,18 +14,18 @@ spec:
   project: services
   source:
     helm:
-    parameters:
-      - name: securityContextCrossplane.runAsUser
-        value: null
-      - name: securityContextCrossplane.runAsGroup
-        value: null
-      - name: securityContextRBACManager.runAsUser
-        value: null
-      - name: securityContextRBACManager.runAsGroup
-        value: null
-  chart: crossplane
-  repoURL: https://charts.crossplane.io/stable
-  targetRevision: 1.10.1
+      parameters:
+        - name: securityContextCrossplane.runAsUser
+          value: null
+        - name: securityContextCrossplane.runAsGroup
+          value: null
+        - name: securityContextRBACManager.runAsUser
+          value: null
+        - name: securityContextRBACManager.runAsGroup
+          value: null
+      chart: crossplane
+      repoURL: https://charts.crossplane.io/stable
+      targetRevision: 1.10.1
   syncPolicy:
     automated:
       prune: true
