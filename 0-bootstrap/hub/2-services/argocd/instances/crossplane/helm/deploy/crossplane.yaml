@@ -15,7 +15,7 @@ spec:
   source:
     chart: crossplane
     repoURL: https://charts.crossplane.io/stable
-    targetRevision: "1.11.0"
+    # targetRevision: "1.11.0"
     helm:
       parameters:
         - name: securityContextCrossplane.runAsUser
