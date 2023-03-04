@@ -9,25 +9,25 @@ resources:
  # Crossplane
 
  ## OperatorHub
-#  - argocd/operators/crossplane/crossplane.yaml
+#  - argocd/operators/crossplane/crossplane.yaml # Operator based install of crossplane does not work.
 
  ## Helm
 
- ### Predeploy (External Secret & Sealed Secret controllers must already be instantiated at this point)
- - argocd/instances/crossplane/helm/predeploy/aws/secrets/aws-secret.yaml
+ ### Provider Secrets (External Secret & Sealed Secret controllers must already be instantiated at this point)
+ - argocd/instances/crossplane/helm/predeploy/aws/secrets/aws-secret.yaml # (205)
 
  ### Deploy
- - argocd/instances/crossplane/helm/deploy/crossplane.yaml
+ - argocd/instances/crossplane/helm/deploy/crossplane.yaml # (200)
 
  ### Runtime 
 
  #### AWS
 
  ##### AWS - Provider
- - argocd/instances/crossplane/helm/runtime/aws/provider/provider.yaml
- - argocd/instances/crossplane/helm/runtime/aws/patch/provider-patch.yaml
+ - argocd/instances/crossplane/helm/runtime/aws/provider/provider.yaml # (210)
+ - argocd/instances/crossplane/helm/runtime/aws/patch/provider-patch.yaml # (220)
  ##### AWS - ProviderConfig
- #  - argocd/instances/crossplane/helm/runtime/aws/providerconfig.yaml
+ - argocd/instances/crossplane/helm/runtime/aws/providerconfig/providerconfig.yaml # (230)
 
 
  ##### AWS - Objects
