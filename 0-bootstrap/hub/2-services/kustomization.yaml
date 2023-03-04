@@ -17,7 +17,7 @@ resources:
  - argocd/instances/crossplane/helm/predeploy/aws/secrets/aws-secret.yaml
 
  ### Deploy
- - argocd/instances/crossplane/helm/predeploy/aws/secrets/aws-secret.yaml
+ - argocd/instances/crossplane/helm/deploy/crossplane.yaml
 
  ### Runtime 
 
