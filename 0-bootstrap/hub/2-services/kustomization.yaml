@@ -3,7 +3,7 @@ resources:
 
  # Secrets Managment
  - argocd/operators/external-secrets.yaml # (200 - Operator based install)
- - argocd/instances/sealed-secrets.yaml   # (200 - This is a helm based install of SealedSecrets)
+#  - argocd/instances/sealed-secrets.yaml   # (200 - This is a helm based install of SealedSecrets)
 
  #  - argocd/instances/external-secrets.yaml  # (203 - Create the SS instance and configure accordingly FIRST)
 
