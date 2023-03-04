@@ -9,12 +9,14 @@ resources:
  - argocd/instances/crossplane/helm/deploy/crossplane.yaml
 #  - argocd/instances/crossplane/helm/rbac/rbac.yaml
 
+ ### Runtime
+ - argocd/instances/crossplane/helm/runtime/aws/provider.yaml
+#  - argocd/instances/crossplane/helm/runtime/aws/providerconfig.yaml
+
  ### PostDeploy
 #  - argocd/instances/crossplane/helm/postdeploy/provider-configuration.yaml
 
- ### Runtime
-#  - argocd/instances/crossplane/helm/runtime/aws/provider.yaml
-#  - argocd/instances/crossplane/helm/runtime/aws/providerconfig.yaml
+ ### Objects
 #  - argocd/instances/crossplane/helm/runtime/aws/resources/bucket.yaml
 
  ## OperatorHub
