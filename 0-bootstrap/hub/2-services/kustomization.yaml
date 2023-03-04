@@ -1,27 +1,37 @@
 resources:
  ## Base Components required for One Touch Provisioning
 
+ # Secrets Managment
+ - argocd/operators/external-secrets.yaml # (200 - Operator based install)
+ - argocd/instances/sealed-secrets.yaml   # (200 - This is a helm based install of SealedSecrets)
+
+ #  - argocd/instances/external-secrets.yaml  # (203 - Create the SS instance and configure accordingly FIRST)
+
  # Crossplane
-
- ## Helm
-
- ### Deploy
- - argocd/instances/crossplane/helm/deploy/crossplane.yaml
-#  - argocd/instances/crossplane/helm/rbac/rbac.yaml
-
- ### Runtime
- - argocd/instances/crossplane/helm/runtime/aws/provider.yaml
-
- ### Runtime - Interim fix
- - argocd/instances/crossplane/helm/postdeploy/provider-configuration.yaml
-#  - argocd/instances/crossplane/helm/runtime/aws/providerconfig.yaml
-
-
- ### Objects
-#  - argocd/instances/crossplane/helm/runtime/aws/resources/bucket.yaml
 
  ## OperatorHub
 #  - argocd/operators/crossplane/crossplane.yaml
+
+ ## Helm
+
+ ### Predeploy (External Secret & Sealed Secret controllers must already be instantiated at this point)
+
+ ### Deploy
+ - argocd/instances/crossplane/helm/deploy/crossplane.yaml
+
+ ### Runtime 
+
+ #### AWS
+
+ ##### AWS - Provider
+ - argocd/instances/crossplane/helm/runtime/aws/provider/provider.yaml
+ - argocd/instances/crossplane/helm/runtime/aws/patch/provider-patch.yaml
+ ##### AWS - ProviderConfig
+ #  - argocd/instances/crossplane/helm/runtime/aws/providerconfig.yaml
+
+
+ ##### AWS - Objects
+#  - argocd/instances/crossplane/helm/runtime/aws/resources/bucket.yaml
 
  # Backstage
  ## Secrets
@@ -50,10 +60,6 @@ resources:
 #  - argocd/instances/quay-registry-instance.yaml
 #  - argocd/operators/quay-container-security.yaml
 #  - argocd/operators/quay-bridge-operator.yaml
-
- # Secrets Managment
-#  - argocd/operators/external-secrets.yaml
-#  - argocd/instances/external-secrets.yaml
 
  # Tekton
  ## Tekton - RBAC
@@ -98,8 +104,7 @@ resources:
  #- argocd/operators/cert-manager.yaml
  #- argocd/instances/cert-manager.yaml
 
- # Secrets Managment
- #- argocd/instances/sealed-secrets.yaml
+
 
  # CICD
  #- argocd/operators/grafana-operator.yaml
