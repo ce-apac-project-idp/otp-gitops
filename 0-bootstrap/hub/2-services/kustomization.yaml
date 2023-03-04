@@ -14,9 +14,10 @@ resources:
  ## Helm
 
  ### Predeploy (External Secret & Sealed Secret controllers must already be instantiated at this point)
+ - argocd/instances/crossplane/helm/predeploy/aws/secrets/aws-secret.yaml
 
  ### Deploy
- - argocd/instances/crossplane/helm/deploy/crossplane.yaml
+ - argocd/instances/crossplane/helm/predeploy/aws/secrets/aws-secret.yaml
 
  ### Runtime 
 
