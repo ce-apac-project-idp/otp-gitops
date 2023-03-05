@@ -8,6 +8,8 @@ metadata:
 spec:
   sourceRepos: [] # Populated by kustomize patches in 2-services/kustomization.yaml
   destinations:
+  - namespace: openshift-rhacm-credentials
+    server: https://kubernetes.default.svc
   - namespace: tekton
     server: https://kubernetes.default.svc
   - namespace: external-secrets
