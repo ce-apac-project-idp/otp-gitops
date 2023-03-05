@@ -3,6 +3,12 @@ apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: custom-argocd-cluster-argocd-application-controller
 rules:
+  - verbs:  # Required for the "openshift-acm-discovery-instance" Argo application
+      - '*'
+    apiGroups:
+      - discovery.open-cluster-management.io
+    resources:
+      - 'discoveryconfigs'
   - verbs:
       - '*'
     apiGroups:
