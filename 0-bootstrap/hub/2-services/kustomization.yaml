@@ -31,26 +31,27 @@ resources:
 
 
  ##### AWS - Objects
-#  - argocd/instances/crossplane/helm/runtime/aws/resources/bucket.yaml
+ #  - argocd/instances/crossplane/helm/runtime/aws/resources/bucket.yaml
 
  # Backstage
+
  ## Secrets
-#  - argocd/instances/backstage/backstage-external-secrets.yaml
+ #  - argocd/instances/backstage/backstage-external-secrets.yaml
  ## Postgresql
-#  - argocd/instances/backstage/postgresql/postgresql.yaml
+ #  - argocd/instances/backstage/postgresql/postgresql.yaml
  ## Backstage instance
-#  - argocd/instances/backstage/backstage/backstage.yaml
+ #  - argocd/instances/backstage/backstage/backstage.yaml
 
 
  # Red Hat Advanced Cluster Management
-# - argocd/operators/openshift-acm.yaml
-# - argocd/instances/openshift-acm-instance.yaml
-# - argocd/instances/openshift-acm-observability-instance.yaml
-# - argocd/instances/openshift-gitopscluster-instance.yaml
+ - argocd/operators/openshift-acm.yaml
+ - argocd/instances/openshift-acm-instance.yaml
+ - argocd/instances/openshift-acm-observability-instance.yaml
+ - argocd/instances/openshift-gitopscluster-instance.yaml
  # Red Hat Advanced Cluster Management - Central Infrastructure Management
-# - argocd/instances/openshift-acm-cim.yaml
+ - argocd/instances/openshift-acm-cim.yaml
  # Red Hat Advanced Cluster Management - Discovery Service
- #- argocd/instances/openshift-acm-discovery-service.yaml
+ - argocd/instances/openshift-acm-discovery-service.yaml
  # Red Hat Advanced Cluster Management - Bare Metal Operator and Ironic
  #- argocd/operators/baremetal-operator.yaml
  #- argocd/operators/ironic.yaml
