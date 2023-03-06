@@ -7,6 +7,11 @@ resources:
  # Console link
  - argocd/consolelink.yaml
 
+ # IDP
+
+ ## IDP - Namespace
+ - argocd/namespaces/idp/developers/namespace.yaml
+
  # Crossplane
 
  ## Namespace Crossplane - Helm

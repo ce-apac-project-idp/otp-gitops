@@ -8,6 +8,8 @@ metadata:
 spec:
   sourceRepos: [] # Populated by kustomize patches in 1-infra/kustomization.yaml
   destinations:
+  - namespace: idp-clients
+    server: https://kubernetes.default.svc
   - namespace: tekton
     server: https://kubernetes.default.svc
   - namespace: upbound-system
