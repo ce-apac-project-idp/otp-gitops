@@ -64,7 +64,7 @@ resources:
 
  # Tekton
  ## Tekton - RBAC
-#  - argocd/instances/tekton/rbac/rbac.yaml
+ - argocd/instances/tekton/rbac/rbac.yaml
  ## Tekton - Backstage tasks
 #  - argocd/instances/tekton/backstage/task/tekton-tasks.yaml
  ## Tekton - Backstage pipeline
@@ -111,7 +111,7 @@ resources:
  #- argocd/operators/grafana-operator.yaml
  #- argocd/instances/grafana-instance.yaml
  # In OCP 4.7+ we need to install openshift-pipelines and possibly privileged scc to the pipeline serviceaccount
-#  - argocd/operators/openshift-pipelines.yaml
+ - argocd/operators/openshift-pipelines.yaml
 
  # Service Mesh
  #- argocd/operators/elasticsearch.yaml
