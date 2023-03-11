@@ -57,6 +57,10 @@ resources:
  # Openshift Advanced Cluster Security
  - argocd/namespaces/namespace-openshift-acs.yaml
 
+ # Cluster CRUD
+ 
+ ## Cluster CRUD - AWS
+ - argocd/namespaces/cluster-crud/aws/aws-resources.yaml
   # Quay Registry
 #  - argocd/namespaces/namespace-quay-registry.yaml
  
