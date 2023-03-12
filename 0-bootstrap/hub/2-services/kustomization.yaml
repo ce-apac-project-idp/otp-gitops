@@ -71,6 +71,9 @@ resources:
 
  ### DevSecOps 
 
+ #### DevSecOps - PreReqs
+ - argocd/instances/tekton/backstage/predeploy/git-cli-resources.yaml
+
  #### DevSecOps - Tekton Tasks
  #  - argocd/instances/tekton/backstage/devsecops/task/tekton-tasks.yaml
  #### DevSecOps - Pipeline component
