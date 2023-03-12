@@ -61,6 +61,8 @@ resources:
  
  ## Cluster CRUD - AWS
  - argocd/namespaces/cluster-crud/aws/aws-resources.yaml
+ - argocd/configmaps/cluster-crud/aws/aws-configmap.yaml
+ 
   # Quay Registry
 #  - argocd/namespaces/namespace-quay-registry.yaml
  

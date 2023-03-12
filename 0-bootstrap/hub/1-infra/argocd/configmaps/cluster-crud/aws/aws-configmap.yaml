@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: configmap-aws-resources
+  namespace: openshift-gitops
+  labels:
+    gitops.tier.layer: infra
+  annotations:
+    argocd.argoproj.io/sync-wave: "110"  # This has to happen after creation of the "aws-resources" namespace. Refer to the cluster-crud directory within the namespaces directory of the Infra App Project.
+spec:
+  destination:
+    namespace: ansible-automation-platform
+    server: https://kubernetes.default.svc
+  project: infra
+  source:
+    path: configmaps/cluster-crud/aws
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
