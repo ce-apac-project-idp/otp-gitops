@@ -8,6 +8,8 @@ metadata:
 spec:
   sourceRepos: [] # Populated by kustomize patches in 2-services/kustomization.yaml
   destinations:
+  - namespace: aws-resources
+    server: https://kubernetes.default.svc
   - namespace: openshift-rhacm-credentials # Required for the "openshift-acm-discovery-instance" Argo application
     server: https://kubernetes.default.svc
   - namespace: tekton
