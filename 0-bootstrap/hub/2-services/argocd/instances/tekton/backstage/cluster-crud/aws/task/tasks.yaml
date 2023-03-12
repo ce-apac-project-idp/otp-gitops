@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: backstage-cluster-crud-manifest-generation-task
+  annotations:
+    argocd.argoproj.io/sync-wave: "225"
+  labels:
+    gitops.tier.layer: services
+spec:
+  destination:
+    namespace: tekton
+    server: https://kubernetes.default.svc
+  project: services
+  source:
+    path: instances/tekton/backstage/cluster-crud/task
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

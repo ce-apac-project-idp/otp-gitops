@@ -86,6 +86,10 @@ resources:
  ##### AWS - Cluster CRUD - PreReqs
  - argocd/instances/tekton/backstage/cluster-crud/aws/predeploy/public-key.yaml
 
+ ##### AWS - Cluster CRUD - Tekton Resources
+ - argocd/instances/tekton/backstage/cluster-crud/aws/task/tasks.yaml
+ - argocd/instances/tekton/backstage/cluster-crud/aws/pipeline.yaml
+
  # Ansible Automation Platform
 #  - argocd/operators/ansible-automation-platform-operator.yaml
 #  - argocd/instances/ansible-automation-platform-controller-instance.yaml
