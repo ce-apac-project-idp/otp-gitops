@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: backstage-cluster-crud-prereqs-aws-public-key
+  annotations:
+    argocd.argoproj.io/sync-wave: "220"
+  labels:
+    gitops.tier.layer: services
+spec:
+  destination:
+    namespace: tekton
+    server: https://kubernetes.default.svc
+  project: services
+  source:
+    path: instances/tekton/backstage/cluster-crud/predeploy
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

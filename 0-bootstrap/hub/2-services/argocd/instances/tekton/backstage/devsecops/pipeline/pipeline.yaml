@@ -1,9 +1,9 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: backstage-tekton-route
+  name: backstage-devsecops-tekton-pipeline
   annotations:
-    argocd.argoproj.io/sync-wave: "290"
+    argocd.argoproj.io/sync-wave: "275"
   labels:
     gitops.tier.layer: services
 spec:
@@ -12,7 +12,7 @@ spec:
     server: https://kubernetes.default.svc
   project: services
   source:
-    path: instances/tekton/backstage/route
+    path: instances/tekton/backstage/pipeline
   syncPolicy:
     automated:
       prune: true

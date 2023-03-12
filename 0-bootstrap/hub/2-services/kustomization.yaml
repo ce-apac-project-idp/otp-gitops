@@ -57,22 +57,34 @@ resources:
  #- argocd/operators/ironic.yaml
  
   # Red Hat Quay Registry
-#  - argocd/operators/quay-registry.yaml
-#  - argocd/instances/quay-registry-instance.yaml
-#  - argocd/operators/quay-container-security.yaml
-#  - argocd/operators/quay-bridge-operator.yaml
+ #  - argocd/operators/quay-registry.yaml
+ #  - argocd/instances/quay-registry-instance.yaml
+ #  - argocd/operators/quay-container-security.yaml
+ #  - argocd/operators/quay-bridge-operator.yaml
 
  # Tekton
+
  ## Tekton - RBAC
  - argocd/instances/tekton/rbac/rbac.yaml
- ## Tekton - Backstage tasks
-#  - argocd/instances/tekton/backstage/task/tekton-tasks.yaml
- ## Tekton - Backstage pipeline
-#  - argocd/instances/tekton/backstage/pipeline/pipeline.yaml
-#  - argocd/instances/tekton/backstage/trigger/trigger.yaml
-#  - argocd/instances/tekton/backstage/eventlistener/event-listener.yaml
-#  - argocd/instances/tekton/backstage/route/route.yaml
 
+ ## Tekton - Backstage tasks
+
+ ### DevSecOps 
+
+ #### DevSecOps - Tekton Tasks
+ #  - argocd/instances/tekton/backstage/devsecops/task/tekton-tasks.yaml
+ #### DevSecOps - Pipeline component
+ #  - argocd/instances/tekton/backstage/devsecops/pipeline/pipeline.yaml
+ #  - argocd/instances/tekton/backstage/devsecops/trigger/trigger.yaml
+ #  - argocd/instances/tekton/backstage/devsecops/eventlistener/event-listener.yaml
+ #  - argocd/instances/tekton/backstage/devsecops/route/route.yaml
+
+ ### Cluster CRUD
+
+ #### AWS
+
+ ##### AWS - Cluster CRUD - PreReqs
+ - argocd/instances/tekton/backstage/cluster-crud/aws/predeploy/public-key.yaml
 
  # Ansible Automation Platform
 #  - argocd/operators/ansible-automation-platform-operator.yaml
