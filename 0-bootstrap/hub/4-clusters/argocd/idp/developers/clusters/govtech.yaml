@@ -10,6 +10,10 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
+  ignoreDifferences:
+    - jsonPointers:
+        - /spec/installed
+      kind: ClusterDeployment
     namespace: govtech
     server: 'https://kubernetes.default.svc'
   project: clusters
