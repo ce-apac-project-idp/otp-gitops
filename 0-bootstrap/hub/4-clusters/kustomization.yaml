@@ -46,7 +46,7 @@ resources:
  #- argocd/submariner/deploy-submariner.yaml
 
  # IDP - Cluster Cruds - Sample
-#  - argocd/idp/developers/clusters/govtech.yaml
+ - argocd/idp/developers/clusters/govtech.yaml
  
 patches:
 - target:
