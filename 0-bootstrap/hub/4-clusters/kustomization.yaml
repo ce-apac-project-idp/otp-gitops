@@ -44,6 +44,9 @@ resources:
  #- argocd/submariner/add-existing-clusters.yaml
  #- argocd/submariner/configure-azure.yaml
  #- argocd/submariner/deploy-submariner.yaml
+
+ # IDP - Cluster Cruds - Sample
+ - argocd/idp/developers/clusters/govtech.yaml
  
 patches:
 - target:
