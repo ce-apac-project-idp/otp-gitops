@@ -9,13 +9,13 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  destination:
   ignoreDifferences:
   - group:  hive.openshift.io
     kind: ClusterDeployment
     jsonPointers:
     - /spec/installed
     namespace: govtech
+  destination:
     server: 'https://kubernetes.default.svc'
   project: clusters
   source:
