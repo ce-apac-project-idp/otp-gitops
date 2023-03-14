@@ -92,6 +92,9 @@ resources:
  ##### AWS - Cluster CRUD - Tekton Resources
  - argocd/instances/tekton/backstage/cluster-crud/aws/task/tasks.yaml
  - argocd/instances/tekton/backstage/cluster-crud/aws/pipeline/pipeline.yaml
+ - argocd/instances/tekton/backstage/cluster-crud/aws/trigger/trigger.yaml
+ - argocd/instances/tekton/backstage/cluster-crud/aws/eventlistener/event-listener.yaml
+ - argocd/instances/tekton/backstage/cluster-crud/aws/route/route.yaml
 
  # Ansible Automation Platform
 #  - argocd/operators/ansible-automation-platform-operator.yaml
