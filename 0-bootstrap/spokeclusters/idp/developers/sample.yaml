@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: channel-subscription-test
+  name: channel-subscription-test-123
 
 # apiVersion: argoproj.io/v1alpha1
 # kind: Application
