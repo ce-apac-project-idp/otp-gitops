@@ -1,38 +1,38 @@
-apiVersion: mq.ibm.com/v1beta1
-kind: QueueManager
-metadata:
-  name: quickstart-cp4i
-  namespace: default
-spec:
-  license:
-    accept: true
-    license: L-RJON-BUVMQX
-    use: NonProduction
-  queueManager:
-    name: QUICKSTART
-    resources:
-      limits:
-        cpu: 500m
-      requests:
-        cpu: 500m
-    storage:
-      queueManager:
-        type: ephemeral
-  template:
-    pod:
-      containers:
-        - env:
-            - name: MQSNOAUT
-              value: 'yes'
-          name: qmgr
-  version: 9.2.0.1-r1-eus
-  web:
-    enabled: true
-
-# apiVersion: v1
-# kind: Namespace
+# apiVersion: mq.ibm.com/v1beta1
+# kind: QueueManager
 # metadata:
-#   name: lambda
+#   name: quickstart-cp4i
+#   namespace: default
+# spec:
+#   license:
+#     accept: true
+#     license: L-RJON-BUVMQX
+#     use: NonProduction
+#   queueManager:
+#     name: QUICKSTART
+#     resources:
+#       limits:
+#         cpu: 500m
+#       requests:
+#         cpu: 500m
+#     storage:
+#       queueManager:
+#         type: ephemeral
+#   template:
+#     pod:
+#       containers:
+#         - env:
+#             - name: MQSNOAUT
+#               value: 'yes'
+#           name: qmgr
+#   version: 9.2.0.1-r1-eus
+#   web:
+#     enabled: true
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: lambda
 
 # apiVersion: argoproj.io/v1alpha1
 # kind: Application
