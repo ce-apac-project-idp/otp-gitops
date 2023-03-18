@@ -96,6 +96,10 @@ resources:
  - argocd/instances/tekton/backstage/cluster-crud/aws/eventlistener/event-listener.yaml
  - argocd/instances/tekton/backstage/cluster-crud/aws/route/route.yaml
 
+ ### Resource Generation
+ - argocd/instances/tekton/backstage/resource-generation/cloudpak/cp4i/mq/task/tekton-tasks.yaml
+ - argocd/instances/tekton/backstage/resource-generation/cloudpak/cp4i/mq/pipeline/pipeline.yaml
+ 
  # Ansible Automation Platform
 #  - argocd/operators/ansible-automation-platform-operator.yaml
 #  - argocd/instances/ansible-automation-platform-controller-instance.yaml
