@@ -2,15 +2,3 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: runespace
-
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: scratchspace
-
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: myspace
