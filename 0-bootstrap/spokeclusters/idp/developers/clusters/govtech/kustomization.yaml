@@ -2,3 +2,58 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: runespace
+
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: idp-qm-mqsc
+  namespace: openshift-gitops
+data:
+  idp.mqsc: |
+    DEFINE CHANNEL(RANGIN) CHLTYPE(SVRCONN) SSLCAUTH (OPTIONAL) REPLACE
+    SET CHLAUTH(ACE.CONN) TYPE(BLOCKUSER) USERLIST(nobody)
+    SET CHLAUTH(ACE.CONN) TYPE (ADDRESSMAP) ADDRESS(*) MCAUSER('mqm')
+    ALTER AUTHINFO(SYSTEM.DEFAULT.AUTHINFO.IDPWOS) AUTHTYPE(IDPWOS) CHCKCLNT(NONE) ADOPTCTX(NO)
+    REFRESH SECURITY TYPE(CONNAUTH)
+    DEFINE QLOCAL(BACKEND.QUEUE) DEFPSIST(NO) MAXDEPTH(10000) REPLACE
+    DEFINE QLOCAL(BACKEND.REPLY) DEFPSIST(NO) MAXDEPTH(10000) REPLACE
+    DEFINE QLOCAL(STORE.QUEUE) DEFPSIST(NO) MAXDEPTH(10000) REPLACE
+
+
+---
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+metadata:
+  name: idp-qm
+  namespace: default
+spec:
+  license:
+    accept: true
+    license: L-RJON-BUVMQX
+    use: NonProduction
+  queueManager:
+    name: QM
+    mqsc:
+      - configMap:
+          items:
+            - idp.mqsc
+          name: idp-qm-mqsc
+    resources:
+      limits:
+        cpu: 500m
+      requests:
+        cpu: 500m
+    storage:
+      queueManager:
+        type: ephemeral
+  template:
+    pod:
+      containers:
+        - env:
+            - name: MQSNOAUT
+              value: 'yes'
+          name: qmgr
+  version: 9.2.0.1-r1-eus
+  web:
+    enabled: false
