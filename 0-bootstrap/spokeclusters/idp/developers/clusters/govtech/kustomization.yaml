@@ -33,4 +33,4 @@ spec:
           name: qmgr
   version: 9.2.0.1-r1-eus
   web:
-    enabled: true
+    enabled: false
