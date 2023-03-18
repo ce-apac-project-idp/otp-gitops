@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: backstage-resource-generation-tekton-pipeline
+  name: backstage-mq-crud-tekton-pipeline
   annotations:
     argocd.argoproj.io/sync-wave: "275"
   labels:

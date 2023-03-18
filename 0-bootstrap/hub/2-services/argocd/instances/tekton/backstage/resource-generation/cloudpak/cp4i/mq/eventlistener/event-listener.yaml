@@ -1,9 +1,9 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: backstage-mq-crud-tekton-tasks
+  name: backstage-mq-crud-tekton-event-listener
   annotations:
-    argocd.argoproj.io/sync-wave: "270"
+    argocd.argoproj.io/sync-wave: "283"
   labels:
     gitops.tier.layer: services
 spec:
@@ -12,7 +12,7 @@ spec:
     server: https://kubernetes.default.svc
   project: services
   source:
-    path: instances/tekton/backstage/resource-generation/cloudpak/cp4i/mq/task
+    path: instances/tekton/backstage/resource-generation/cloudpak/cp4i/mq/eventlistener
   syncPolicy:
     automated:
       prune: true
