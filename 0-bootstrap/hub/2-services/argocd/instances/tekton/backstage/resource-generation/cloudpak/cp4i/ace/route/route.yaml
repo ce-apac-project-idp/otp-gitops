@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: backstage-ace-crud-tekton-route
+  annotations:
+    argocd.argoproj.io/sync-wave: "287"
+  labels:
+    gitops.tier.layer: services
+spec:
+  destination:
+    namespace: tekton
+    server: https://kubernetes.default.svc
+  project: services
+  source:
+    path: instances/tekton/backstage/resource-generation/cloudpak/cp4i/ace/route
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
