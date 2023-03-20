@@ -108,6 +108,11 @@ resources:
  #### Resource Generation - ACE
  - argocd/instances/tekton/backstage/resource-generation/cloudpak/cp4i/ace/task/tekton-tasks.yaml
  - argocd/instances/tekton/backstage/resource-generation/cloudpak/cp4i/ace/pipeline/pipeline.yaml
+ - argocd/instances/tekton/backstage/resource-generation/cloudpak/cp4i/ace/eventlistener/event-listener.yaml
+ - argocd/instances/tekton/backstage/resource-generation/cloudpak/cp4i/ace/route/route.yaml
+ - argocd/instances/tekton/backstage/resource-generation/cloudpak/cp4i/ace/trigger/trigger.yaml
+
+
  
  # Ansible Automation Platform
 #  - argocd/operators/ansible-automation-platform-operator.yaml
